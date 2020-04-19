@@ -75,3 +75,6 @@ class Emisija(object):
         d1 = self.kraj - self.pocetak
         d2 = drugi.kraj - drugi.pocetak
         return not (d1 == d2) and not (d1 < d2)
+
+    def __eq__(self, drugi):
+        return not (self < drugi) and not (self > drugi)
