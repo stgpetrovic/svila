@@ -49,6 +49,9 @@ class Vrijeme():
         if delta.S < 0:
             delta.S += 60
             delta.M -= 1
+        if delta.M < 0:
+            delta.M += 60
+            delta.H -= 1
         return delta
 
 
